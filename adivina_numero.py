@@ -1,8 +1,8 @@
 # importamos librerias
 import random
-from colorama import init, Fore, Style, Back
+#from colorama import init, Fore, Style, Back
 
-init(autoreset=True)
+#init(autoreset=True)
 
 def adivina_numero():
     try:
@@ -12,12 +12,13 @@ def adivina_numero():
         adivinado = False
         usuario = input("Ingresa tu nombre: ")
 
+        print(f"\nBienvenido {usuario} al juego de adivinar el numero!")
+        print(f"\nEl juego es simple, tienes que adivinar un numero entre 0 y 100 \nTienes {max_intentos} de intentos")
+        print("\nCada vez que adivines un numero, te dire si es mayor o menor al numero secreto")
+        print("\nEstas listo? Vamos a empezar!")
+
         while not adivinado and intentos < max_intentos:
                 try:
-                    print(f"\nBienvenido {usuario} al juego de adivinar el numero!")
-                    print(f"\nEl juego es simple, tienes que adivinar un numero entre 0 y 100 \nTienes {max_intentos} de intentos")
-                    print("\nCada vez que adivines un numero, te dire si es mayor o menor al numero secreto")
-                    print("\nEstas listo? Vamos a empezar!")
                     adivina = int(input("\nIngresa el numero entre 0 y 100: "))
                     
                 except ValueError:
